@@ -1,0 +1,56 @@
+{
+    "editor.acceptSuggestionOnEnter": "smart",
+
+    "vim.leader": "<space>",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {"before":["down"],"after":["<C-o>","g","j"]},
+        {"before":["up"],"after":["<C-o>","g","k"]},
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {"before": ["u"],"commands"   : [{"command"  : "undo"}]},
+        {"before": ["<C-r>"],"commands": [{"command": "redo"}]},
+
+        {"before": ["x"],"commands"   : [{"command"  : "deleteRight"}]},
+        {"before": ["n"],"after"      : ["n","z","z"]},
+        {"before": ["N"],"after"      : ["N","z","z"]},
+        {"before": ["*"],"after"      : ["*","z","z"]},
+        {"before": ["#"],"after"      : ["#","z","z"]},
+        {"before": [">"],"commands"   : ["editor.action.indentLines"]},
+        {"before": ["<"],"commands"   : ["editor.action.outdentLines"]},
+        {"before":["j"],"after":["g","j"]},
+        {"before":["k"],"after":["g","k"]},
+        {"before":["down"],"after":["g","j"]},
+        {"before":["up"],"after":["g","k"]},
+        { "before": ["leader","w"], "after": [], "commands": [ { "command": "workbench.action.files.save", "args": [] } ] }
+    ],
+    "vim.highlightedyank.enable"   : true,
+    "vim.highlightedyank.color"    : "rgba(0   , 240 , 170 , 0.5)" ,
+    "vim.highlightedyank.duration" : 500,
+    "vim.useSystemClipboard": true,
+    "vim.foldfix": true,
+
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-_", //Add "_"
+    "editor.wordWrap": "on",
+    "editor.trimAutoWhitespace": false,
+    "trailing-spaces.highlightCurrentLine": false,
+    "trailing-spaces.includeEmptyLines": false,
+
+    "editor.renderControlCharacters": true,
+    "editor.fontLigatures": true,
+    "editor.renderLineHighlight": "all",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+    },
+    "editor.suggest.showWords": false,
+    "editor.lineNumbers": "on",
+    "editor.guides.bracketPairs": true,
+    "editor.bracketPairColorization.enabled": true
+}
